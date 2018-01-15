@@ -10,10 +10,12 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { LoginComponent } from './login/login.component';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { WebAnalyticsComponent } from './web-analytics/web-analytics.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WebAnalyticsComponent
   ],
   imports: [
     BrowserModule,
