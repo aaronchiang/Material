@@ -1,0 +1,17 @@
+.mat-column-FundId {
+    text-align: center;
+    width: 50px;
+}
+
+.mat-column-FundName {
+    width: 250px;
+}
+
+.mat-column-Nav {
+    text-align: right
+}
+
+.mat-header-cell {
+    font-weight: bold;
+    text-align: center;
+}

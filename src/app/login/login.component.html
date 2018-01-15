@@ -1,0 +1,30 @@
+<div class="main">
+  <mat-card class="z-depth center mat-card-flat" flex="50">
+    <mat-card-header>
+      <mat-card-title color="primary">系統登入</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <p>
+          <mat-form-field>
+            <input matInput #userId placeholder="身分證字號" maxlength="10" pattern="[[a-zA-Z]{1}[0-9]{9}]|[0-9]{8}" required />
+            <i class="fa fa-user" matSuffix></i>
+            <mat-hint align="end">{{userId.value.length}} / 10</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input matInput type="password" placeholder="密碼" required>
+            <i class="fa fa-key" matSuffix></i>
+          </mat-form-field>
+        </p>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="button" mat-raised-button>
+        <i class="fa fa-user-plus"></i>&nbsp;我要開戶</button>
+      <button type="button" mat-raised-button color="primary">
+        <i class="fa fa-sign-in"></i>&nbsp;登入</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
