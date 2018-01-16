@@ -55,7 +55,10 @@ export const TW_FORMATS = {
   imports: [
     CommonModule,
   ],
-  declarations: [],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'zh-TW' },
+    { provide: MAT_DATE_FORMATS, useValue: TW_FORMATS }
+  ],
   exports: [
     MatButtonModule,
     MatIconModule,

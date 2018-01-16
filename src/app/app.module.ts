@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { LoginComponent } from './login/login.component';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebAnalyticsComponent } from './web-analytics/web-analytics.component';
 
 @NgModule({
@@ -22,6 +23,8 @@ import { WebAnalyticsComponent } from './web-analytics/web-analytics.component';
     BrowserAnimationsModule,
     HttpModule,
     SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
     DashboardModule,
     AppRoutingModule
   ],

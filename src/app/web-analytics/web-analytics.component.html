@@ -1,0 +1,48 @@
+<form [formGroup]="analyticsForm">
+    <div>
+        <mat-form-field floatLabel="always">
+            <input type="text" name="analyticsDate" matInput placeholder="週索引" formControlName="analyticsDate" [matDatepicker]="analyticsDatepicker" required/>
+            <mat-datepicker-toggle [for]="analyticsDatepicker" matSuffix></mat-datepicker-toggle>
+            <mat-datepicker #analyticsDatepicker touchUi="true"></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field floatLabel="always">
+            <input type="number" name="browseVolume" matInput placeholder="瀏覽量" formControlName="browseVolume" required/>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field floatLabel="always">
+            <input type="number" name="visitCount" matInput placeholder="訪次" formControlName="visitCount" required/>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field floatLabel="always">
+            <input type="number" name="userCount" matInput placeholder="使用者" formControlName="userCount" required/>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field floatLabel="always">
+            <input type="number" name="avgTime" matInput placeholder="網頁下載平均所需時間" formControlName="avgTime" required/>
+            <span matSuffix>秒</span>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field floatLabel="always">
+            <input type="number" name="stayTime" matInput placeholder="平均工作階段時間長度" formControlName="stayTime" required/>
+            <span matSuffix>秒</span>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field floatLabel="always">
+            <input type="number" name="pageCount" matInput placeholder="單次工作階段頁數" formControlName="pageCount" required/>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field floatLabel="always">
+            <input type="number" name="exitRate" matInput placeholder="跳出率" formControlName="exitRate" required/>
+            <span matSuffix>%</span>
+        </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary"><mat-icon>done</mat-icon></button>
+</form>
