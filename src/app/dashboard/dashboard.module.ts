@@ -5,6 +5,8 @@ import { SharedModule } from '../shared/shared.module';
 //import { DashboardRoutingModule } from './dashboard-routing.module';
 import { MainComponent } from './main/main.component';
 
+import 'flipclock/compiled/flipclock';
+
 @NgModule({
   imports: [
     CommonModule,

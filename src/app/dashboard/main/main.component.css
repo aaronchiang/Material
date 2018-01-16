@@ -1,17 +1,22 @@
 .mat-column-FundId {
     text-align: center;
-    width: 50px;
 }
 
 .mat-column-FundName {
-    width: 250px;
+    flex: 9;
 }
 
 .mat-column-Nav {
-    text-align: right
+    text-align: right;
+    flex: 2;
 }
 
 .mat-header-cell {
     font-weight: bold;
     text-align: center;
+}
+
+.mat-card-header {
+    font-size: 56px;
+    margin-top: 25px;
 }
