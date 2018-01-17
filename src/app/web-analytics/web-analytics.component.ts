@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, ValidatorFn, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import { MatStepperIntl, ErrorStateMatcher, MatDatepickerInputEvent } from '@angular/material';
+import { Http } from '@angular/http';
 import * as moment from 'moment';
 
 @Component({
@@ -13,7 +14,7 @@ export class WebAnalyticsComponent implements OnInit {
   today = moment();
   analyticsForm: FormGroup;
 
-  constructor() {
+  constructor(private _http: Http) {
     this.createForm();
   }
 
@@ -38,21 +39,22 @@ export class WebAnalyticsComponent implements OnInit {
 
   private createForm() {
     this.analyticsForm = new FormGroup({
-      analyticsType: new FormControl(1, Validators.required),
-      analyticsDate: new FormControl(this.today, Validators.required),
-      browseVolume: new FormControl(0, Validators.required),
-      visitCount: new FormControl(0, Validators.required),
-      userCount: new FormControl(0, Validators.required),
-      avgTime: new FormControl(0, Validators.required),
-      stayTime: new FormControl(0, Validators.required),
-      pageCount: new FormControl(0, Validators.required),
-      exitRate: new FormControl(0.00, Validators.required)
+      AnalyticsType: new FormControl(1, Validators.required),
+      AnalyticsDate: new FormControl(this.today, Validators.required),
+      BrowseVolume: new FormControl(0, Validators.required),
+      VisitCount: new FormControl(0, Validators.required),
+      UserCount: new FormControl(0, Validators.required),
+      AvgTime: new FormControl(0, Validators.required),
+      StayTime: new FormControl(0, Validators.required),
+      PageCount: new FormControl(0, Validators.required),
+      ExitRate: new FormControl(0.00, Validators.required)
     });
   }
 
   public saveForm() {
     if (this.analyticsForm.valid) {
       console.log(this.analyticsForm.value);
+      this._http.post('http://localhost:55196/api/BI', this.analyticsForm.value).subscribe(res => console.log(res));
       this.createForm();
     }
   }
