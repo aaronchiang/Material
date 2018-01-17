@@ -2,6 +2,10 @@
     text-align: center;
 }
 
+.mat-column-IsLocked {
+    text-align: center;
+}
+
 .mat-column-FundName {
     flex: 9;
 }
@@ -9,6 +13,14 @@
 .mat-column-Nav {
     text-align: right;
     flex: 2;
+}
+
+.mat-column-LogTime {
+    flex: 1
+}
+
+.mat-column-Description {
+    flex: 9
 }
 
 .mat-header-cell {
@@ -19,4 +31,8 @@
 .mat-card-header {
     font-size: 56px;
     margin-top: 25px;
+}
+
+.warn {
+    color: rgb(129, 129, 3);
 }

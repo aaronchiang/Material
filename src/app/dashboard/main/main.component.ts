@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { CoreService, DailyAccounting, AccountingFund } from '../../core.service';
+import { CoreService, DailyAccounting, AccountingFund, Summary } from '../../core.service';
 import { MatTableDataSource, MatPaginator, PageEvent, MatSort, Sort } from '@angular/material';
 import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
@@ -13,12 +13,15 @@ declare var FlipClock: any;
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit, AfterViewInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) fundPaginator: MatPaginator;
+  @ViewChild(MatSort) fundSort: MatSort;
+  @ViewChild(MatPaginator) logPaginator: MatPaginator;
+  @ViewChild(MatSort) logSort: MatSort;
 
-  displayedHeadColumns = ['FundId', 'FundName', 'Nav'];
-  displayedRowColumns = ['FundId', 'FundName', 'Nav'];
+  displayedFundColumns = ['FundId', 'IsLocked', 'FundName', 'Nav', 'NavDate'];
+  displayedLogColumns = ['LogTime', 'Description'];
   fundDataSource = new MatTableDataSource<AccountingFund>();
+  logDataSource = new MatTableDataSource<Summary>();
   dayLabel: any;
   data: DailyAccounting = new DailyAccounting();
   fundCount = 0;
@@ -32,6 +35,7 @@ export class MainComponent implements OnInit, AfterViewInit {
     this._service.getDailyAccounting().subscribe(data => {
       this.data = data;
       this.fundDataSource.data = data.FundList;
+      this.logDataSource.data = data.SummaryList;
 
       if (this.prevDate != this.data.BaseDate) {
         console.log(this.dayLabel);
@@ -50,7 +54,9 @@ export class MainComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.fundDataSource.paginator = this.paginator;
-    this.fundDataSource.sort = this.sort;
+    this.fundDataSource.paginator = this.fundPaginator;
+    this.fundDataSource.sort = this.fundSort;
+    this.logDataSource.paginator = this.logPaginator;
+    this.logDataSource.sort = this.logSort;
   }
 }
