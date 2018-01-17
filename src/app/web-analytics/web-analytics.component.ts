@@ -13,6 +13,8 @@ export class WebAnalyticsComponent implements OnInit {
   analyticsTypeList: any[];
   today = moment();
   analyticsForm: FormGroup;
+  minDate = moment().add('years', -1);
+  maxDate = moment();
 
   constructor(private _http: Http) {
     this.createForm();

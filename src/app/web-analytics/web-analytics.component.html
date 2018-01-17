@@ -13,9 +13,9 @@
             </div>
             <div>
                 <mat-form-field floatLabel="always">
-                    <input type="text" name="AnalyticsDate" matInput placeholder="週索引" formControlName="AnalyticsDate" [matDatepicker]="analyticsDatepicker" required/>
-                    <mat-datepicker-toggle [for]="analyticsDatepicker" matSuffix></mat-datepicker-toggle>
-                    <mat-datepicker #analyticsDatepicker touchUi="true"></mat-datepicker>
+                    <input matInput [max]="maxDate" [min]="minDate" placeholder="週索引" formControlName="AnalyticsDate" [matDatepicker]="AnalyticsDatepicker" disabled required/>
+                    <mat-datepicker-toggle [for]="AnalyticsDatepicker" matSuffix></mat-datepicker-toggle>
+                    <mat-datepicker #AnalyticsDatepicker  disabled="false" touchUi="true"></mat-datepicker>
                 </mat-form-field>
             </div>
             <div>
