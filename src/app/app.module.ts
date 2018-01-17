@@ -10,13 +10,16 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { LoginComponent } from './login/login.component';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { ComponentsModule } from './components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebAnalyticsComponent } from './web-analytics/web-analytics.component';
+import { NavExportComponent } from './components/nav-export/nav-export.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WebAnalyticsComponent
+    WebAnalyticsComponent,
+    NavExportComponent
   ],
   imports: [
     BrowserModule,
