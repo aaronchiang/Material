@@ -19,7 +19,8 @@ import { NavExportComponent } from './components/nav-export/nav-export.component
   declarations: [
     AppComponent,
     WebAnalyticsComponent,
-    NavExportComponent
+    NavExportComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
