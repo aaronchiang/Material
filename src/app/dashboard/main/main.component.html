@@ -1,6 +1,6 @@
 <mat-card>
     <mat-card-header>
-        <span class="mat-h1 mat-card-header">{{ data.BaseDate | date:'MM/dd' }}&nbsp;</span><span class="clock" style="zoom: 0.7;-moz-transform: scale(0.7)"></span>
+        <span class="mat-h1 mat-card-header">{{ data.BaseDate | date:'MM/dd' }}&nbsp;({{ data.BaseDate | amDateFormat:'ddd' }})</span><span class="clock" style="zoom: 0.7;-moz-transform: scale(0.7)"></span>
     </mat-card-header>
     <mat-card-content>
         <div style="width: 550px">

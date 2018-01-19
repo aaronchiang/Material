@@ -37,6 +37,7 @@ import {
   MatPaginatorModule
 } from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MomentModule } from 'angular2-moment';
 
 export const TW_FORMATS = {
   parse: {
@@ -91,7 +92,8 @@ export const TW_FORMATS = {
     MatTabsModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MomentModule
   ]
 })
 export class SharedModule { }
