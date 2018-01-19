@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { Injectable } from '@angular/core';
 import { Http, Response, ResponseContentType } from '@angular/http';
 
@@ -6,12 +7,13 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CoreService {
+  fundDailyUrl = environment.fundDailyUrl;
 
   constructor(private _http: Http) {
   }
 
   getDailyAccounting(): Observable<DailyAccounting> {
-    return this._http.get('http://172.17.3.12/api/DailyAccounting').map(res => res.json());
+    return this._http.get(this.fundDailyUrl).map(res => res.json());
   }
 
   downloadNav(): Observable<any> {

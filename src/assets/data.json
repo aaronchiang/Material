@@ -1,0 +1,1172 @@
+{
+  "CurrentTime": "2018-01-12T18:14:38.4240604+08:00",
+  "BaseDate": "2018-01-12T00:00:00+08:00",
+  "WorkDate": "1070111",
+  "IsNavReady": false,
+  "Confirmed": 74,
+  "Locked": 74,
+  "Done": false,
+  "IsWork": true,
+  "FundList": [{
+      "FundId": "01",
+      "FundName": "富蘭克林華美第一富基金",
+      "Nav": 40.34,
+      "NavDate": "1070112",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "16:31:23"
+    },
+    {
+      "FundId": "02",
+      "FundName": "富蘭克林全球債券組合基金累積型",
+      "Nav": 12.9442,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:33:07"
+    },
+    {
+      "FundId": "03",
+      "FundName": "坦伯頓全球股票組合基金",
+      "Nav": 13.1159,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:19:18"
+    },
+    {
+      "FundId": "04",
+      "FundName": "富蘭克林全球債券組合基金分配型",
+      "Nav": 8.5987,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:33:07"
+    },
+    {
+      "FundId": "05",
+      "FundName": "富蘭克林華美新世界股票基金",
+      "Nav": 15.27,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:08:17"
+    },
+    {
+      "FundId": "06",
+      "FundName": "富蘭克林華美中華基金",
+      "Nav": 15.34,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:17:23"
+    },
+    {
+      "FundId": "07",
+      "FundName": "天然資源組合基金",
+      "Nav": 7.8568,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:17:23"
+    },
+    {
+      "FundId": "08",
+      "FundName": "新興市場股票組合基金",
+      "Nav": 11.6949,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:35:42"
+    },
+    {
+      "FundId": "09",
+      "FundName": "積極回報債券組合基金累積型",
+      "Nav": 11.1679,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:34:51"
+    },
+    {
+      "FundId": "10",
+      "FundName": "積極回報債券組合基金分配型",
+      "Nav": 7.582,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:34:51"
+    },
+    {
+      "FundId": "11",
+      "FundName": "中國消費基金",
+      "Nav": 11.23,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:54:46"
+    },
+    {
+      "FundId": "12",
+      "FundName": "富蘭克林華美高科技基金",
+      "Nav": 20.32,
+      "NavDate": "1070112",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:19:17"
+    },
+    {
+      "FundId": "13",
+      "FundName": "傳產基金",
+      "Nav": 19.76,
+      "NavDate": "1070112",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:20:06"
+    },
+    {
+      "FundId": "14",
+      "FundName": "全球高收益債券Ａ累積型",
+      "Nav": 10.7995,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "15",
+      "FundName": "全球高收益債券Ｂ分配型",
+      "Nav": 7.9073,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "16",
+      "FundName": "富蘭克林華美貨幣市場基金",
+      "Nav": 10.2754,
+      "NavDate": "1070115",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "175330"
+    },
+    {
+      "FundId": "17",
+      "FundName": "全球投資級債券基金累積型",
+      "Nav": 9.4637,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:41:03"
+    },
+    {
+      "FundId": "18",
+      "FundName": "全球投資級債券基金分配型",
+      "Nav": 8.2185,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:41:03"
+    },
+    {
+      "FundId": "19",
+      "FundName": "全球高收益債券Ａ累積型－美元",
+      "Nav": 10.3186,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "20",
+      "FundName": "全球高收益債券Ｂ分配型－美元",
+      "Nav": 8.085,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "21",
+      "FundName": "全球高收益債券Ａ累積型－澳幣",
+      "Nav": 10.6339,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "22",
+      "FundName": "全球高收益債券Ｂ分配型－澳幣",
+      "Nav": 8.1485,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "23",
+      "FundName": "中國Ａ股基金",
+      "Nav": 11.82,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:34:44"
+    },
+    {
+      "FundId": "24",
+      "FundName": "中國高收益債券基金",
+      "Nav": 9.1117,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:08:57"
+    },
+    {
+      "FundId": "25",
+      "FundName": "全球高收益債券Ａ累積型－人民幣",
+      "Nav": 11.1842,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "26",
+      "FundName": "全球高收益債券Ｂ分配型－人民幣",
+      "Nav": 9.2114,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "27",
+      "FundName": "全球成長基金",
+      "Nav": 10.96,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:23:23"
+    },
+    {
+      "FundId": "28",
+      "FundName": "全球成長基金－美元",
+      "Nav": 11.76,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:23:23"
+    },
+    {
+      "FundId": "29",
+      "FundName": "中國消費基金－人民幣",
+      "Nav": 11.72,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:54:49"
+    },
+    {
+      "FundId": "30",
+      "FundName": "中國Ａ股基金－人民幣",
+      "Nav": 10.38,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:34:44"
+    },
+    {
+      "FundId": "31",
+      "FundName": "中國高收益債券基金－人民幣",
+      "Nav": 10.0118,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:08:57"
+    },
+    {
+      "FundId": "32",
+      "FundName": "中國消費基金－美元",
+      "Nav": 13.31,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:54:51"
+    },
+    {
+      "FundId": "33",
+      "FundName": "全球高收益債券Ａ累積型－南非幣",
+      "Nav": 13.0461,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "34",
+      "FundName": "全球高收益債券Ｂ分配型－南非幣",
+      "Nav": 10.829,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "35",
+      "FundName": "中國Ａ股基金－美元",
+      "Nav": 12.59,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:34:44"
+    },
+    {
+      "FundId": "36",
+      "FundName": "中國高收益債券基金－美元",
+      "Nav": 9.628,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:08:57"
+    },
+    {
+      "FundId": "37",
+      "FundName": "全球債券組合基金累積型－美元",
+      "Nav": 10.3055,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:33:08"
+    },
+    {
+      "FundId": "38",
+      "FundName": "全球債券組合基金分配型－美元",
+      "Nav": 9.8071,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:33:08"
+    },
+    {
+      "FundId": "39",
+      "FundName": "新世界股票基金－美元",
+      "Nav": 13.7,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:08:17"
+    },
+    {
+      "FundId": "40",
+      "FundName": "新世界股票基金－人民幣",
+      "Nav": 13.91,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:08:17"
+    },
+    {
+      "FundId": "41",
+      "FundName": "積極回報債券基金累積型－美元",
+      "Nav": 10.7599,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:34:51"
+    },
+    {
+      "FundId": "42",
+      "FundName": "積極回報債券基金分配型－美元",
+      "Nav": 9.984,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:34:51"
+    },
+    {
+      "FundId": "43",
+      "FundName": "積極回報債券基金累積型－人民幣",
+      "Nav": 11.5063,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:34:51"
+    },
+    {
+      "FundId": "44",
+      "FundName": "積極回報債券基金分配型－人民幣",
+      "Nav": 10.4908,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:34:51"
+    },
+    {
+      "FundId": "45",
+      "FundName": "全球投資級債券基金累積型－美元",
+      "Nav": 9.9868,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:41:03"
+    },
+    {
+      "FundId": "46",
+      "FundName": "全球投資級債券基金分配型－美元",
+      "Nav": 9.5166,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:41:03"
+    },
+    {
+      "FundId": "47",
+      "FundName": "多重收益平衡基金累積型",
+      "Nav": 10.02,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:03:11"
+    },
+    {
+      "FundId": "48",
+      "FundName": "多重收益平衡基金分配型",
+      "Nav": 9.2,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:03:11"
+    },
+    {
+      "FundId": "49",
+      "FundName": "多重收益平衡基金累積型－美元",
+      "Nav": 11.07,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:03:11"
+    },
+    {
+      "FundId": "50",
+      "FundName": "多重收益平衡基金分配型－美元",
+      "Nav": 10.16,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:03:11"
+    },
+    {
+      "FundId": "51",
+      "FundName": "多重收益平衡基金累積型－人民幣",
+      "Nav": 10.72,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:03:11"
+    },
+    {
+      "FundId": "52",
+      "FundName": "多重收益平衡基金分配型－人民幣",
+      "Nav": 9.71,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:03:11"
+    },
+    {
+      "FundId": "53",
+      "FundName": "多重收益平衡基金累積型－南非幣",
+      "Nav": 10.8,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:03:11"
+    },
+    {
+      "FundId": "54",
+      "FundName": "多重收益平衡基金分配型－南非幣",
+      "Nav": 9.13,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "15:03:11"
+    },
+    {
+      "FundId": "55",
+      "FundName": "亞太平衡基金累積型",
+      "Nav": 11.12,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "13:57:08"
+    },
+    {
+      "FundId": "56",
+      "FundName": "亞太平衡基金分配型",
+      "Nav": 10.62,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "13:57:08"
+    },
+    {
+      "FundId": "57",
+      "FundName": "亞太平衡基金累積型－美元",
+      "Nav": 11.72,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "13:57:08"
+    },
+    {
+      "FundId": "58",
+      "FundName": "亞太平衡基金分配型－美元",
+      "Nav": 11.18,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "13:57:08"
+    },
+    {
+      "FundId": "59",
+      "FundName": "亞太平衡基金分配型－人民幣",
+      "Nav": 11.23,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "13:57:08"
+    },
+    {
+      "FundId": "60",
+      "FundName": "全球高收益債券Ｃ分配型",
+      "Nav": 9.5138,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "61",
+      "FundName": "全球高收益債券Ｃ分配型－美元",
+      "Nav": 9.7137,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "62",
+      "FundName": "全球高收益債券Ｃ分配型－人民幣",
+      "Nav": 9.7717,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "14:30:33"
+    },
+    {
+      "FundId": "63",
+      "FundName": "穩健多空策略基金－美元",
+      "Nav": 9.99,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:49:16"
+    },
+    {
+      "FundId": "64",
+      "FundName": "策略高股息基金累積型",
+      "Nav": 10.33,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "12:01:45"
+    },
+    {
+      "FundId": "65",
+      "FundName": "策略高股息基金分配型",
+      "Nav": 10.16,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "12:01:45"
+    },
+    {
+      "FundId": "66",
+      "FundName": "策略高股息基金累積型－美元",
+      "Nav": 10.52,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "12:01:45"
+    },
+    {
+      "FundId": "67",
+      "FundName": "策略高股息基金分配型－美元",
+      "Nav": 10.35,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "12:01:45"
+    },
+    {
+      "FundId": "68",
+      "FundName": "積極多空策略基金",
+      "Nav": 9.79,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "13:29:14"
+    },
+    {
+      "FundId": "69",
+      "FundName": "目標2027組合基金",
+      "Nav": 0,
+      "NavDate": null,
+      "IsLocked": null,
+      "IsConfirmed": null,
+      "IsWork": true,
+      "MainTime": ""
+    },
+    {
+      "FundId": "70",
+      "FundName": "目標2027組合基金－美元",
+      "Nav": 0,
+      "NavDate": null,
+      "IsLocked": null,
+      "IsConfirmed": null,
+      "IsWork": true,
+      "MainTime": ""
+    },
+    {
+      "FundId": "71",
+      "FundName": "目標2037組合基金",
+      "Nav": 10.29,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:56:50"
+    },
+    {
+      "FundId": "72",
+      "FundName": "目標2037組合基金－美元",
+      "Nav": 10.48,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:56:50"
+    },
+    {
+      "FundId": "73",
+      "FundName": "目標2047組合基金",
+      "Nav": 10.3,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:56:51"
+    },
+    {
+      "FundId": "74",
+      "FundName": "目標2047組合基金－美元",
+      "Nav": 10.48,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "11:56:51"
+    },
+    {
+      "FundId": "75",
+      "FundName": "全球醫療保健基金",
+      "Nav": 10.38,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "12:21:34"
+    },
+    {
+      "FundId": "76",
+      "FundName": "全球醫療保健基金－美元",
+      "Nav": 10.52,
+      "NavDate": "1070111",
+      "IsLocked": true,
+      "IsConfirmed": true,
+      "IsWork": true,
+      "MainTime": "12:21:34"
+    }
+  ],
+  "SummaryList": [{
+      "LogTime": "2018-01-12T17:55:51.67+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:55:47.067+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:55:42.4+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:55:37.733+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:55:33.39+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:55:29.247+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:55:24.893+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:55:17.59+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:30:12.043+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:26:17.463+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:26:13.607+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:26:09.02+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:26:04.533+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:26:00.423+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:25:56.3+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:25:51.24+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:25:47.39+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:25:42.82+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:25:37.943+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:25:33.323+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:25:29.03+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:25:24.573+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:25:15.35+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:15:36.897+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:15:31.957+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:15:26.55+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:15:16.16+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:01:15.44+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:01:10.96+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:01:06.287+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:01:01.573+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:00:56.347+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:00:52.103+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:00:49.623+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:00:45.08+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:00:40.513+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:00:37.953+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:00:33.277+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:00:29.903+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:00:18.693+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T17:00:16.337+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T16:56:46.107+08:00",
+      "Description": "KYC 100 年版匯入資料檔"
+    },
+    {
+      "LogTime": "2018-01-12T16:50:13.22+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T16:45:12.867+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T16:35:35.847+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T16:35:31.57+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T16:35:27.48+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T16:35:23.51+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T16:35:11.447+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T16:30:18.17+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T16:10:24.563+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T16:10:15.52+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T15:30:32.393+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T15:30:27.783+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T15:30:24.077+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T15:30:11.113+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T15:20:24.33+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T15:20:14.44+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T15:15:19.33+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T15:15:07.193+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T15:10:29.67+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T15:10:24.637+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T15:10:12.8+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T14:38:50.28+08:00",
+      "Description": "境外W8Ben資料匯入"
+    },
+    {
+      "LogTime": "2018-01-12T14:38:50.147+08:00",
+      "Description": "境外KYC股務資料匯入"
+    },
+    {
+      "LogTime": "2018-01-12T14:38:47.3+08:00",
+      "Description": "境外扣款帳戶匯出"
+    },
+    {
+      "LogTime": "2018-01-12T14:38:43.897+08:00",
+      "Description": "境外銀行帳戶主檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T14:38:35.45+08:00",
+      "Description": "境外銀行帳戶主檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T14:38:20.623+08:00",
+      "Description": "境外開戶基本資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T14:30:24.24+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T14:30:14.987+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T12:10:29.103+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T12:10:24.433+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T12:10:12.45+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T12:05:29.72+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T12:05:25.217+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T12:05:17.88+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T11:50:29.973+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T11:50:25.49+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T11:50:13.677+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T11:50:06.457+08:00",
+      "Description": "境外扣款帳戶核印狀態匯入"
+    },
+    {
+      "LogTime": "2018-01-12T11:28:10.447+08:00",
+      "Description": "KYC 100 年版匯入資料檔"
+    },
+    {
+      "LogTime": "2018-01-12T11:25:06.237+08:00",
+      "Description": "淨值資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T11:19:54.57+08:00",
+      "Description": "KYC 100 年版匯入資料檔"
+    },
+    {
+      "LogTime": "2018-01-12T11:04:11.4+08:00",
+      "Description": "境外W8Ben資料匯入"
+    },
+    {
+      "LogTime": "2018-01-12T11:04:11.3+08:00",
+      "Description": "境外KYC股務資料匯入"
+    },
+    {
+      "LogTime": "2018-01-12T11:04:08.687+08:00",
+      "Description": "境外扣款帳戶匯出"
+    },
+    {
+      "LogTime": "2018-01-12T11:04:05.643+08:00",
+      "Description": "境外銀行帳戶主檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T11:03:56.547+08:00",
+      "Description": "境外銀行帳戶主檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T11:03:41.077+08:00",
+      "Description": "境外開戶基本資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T11:03:20.953+08:00",
+      "Description": "KYC 100 年版匯入資料檔"
+    },
+    {
+      "LogTime": "2018-01-12T11:00:06.243+08:00",
+      "Description": "黑名單資料檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T10:59:10.09+08:00",
+      "Description": "境外W8Ben資料匯入"
+    },
+    {
+      "LogTime": "2018-01-12T10:01:40.36+08:00",
+      "Description": "美國註冊基金W8Ben資料匯出"
+    },
+    {
+      "LogTime": "2018-01-12T09:52:49.45+08:00",
+      "Description": "境外W8Ben資料匯入"
+    },
+    {
+      "LogTime": "2018-01-12T09:52:49.15+08:00",
+      "Description": "境外KYC股務資料匯入"
+    },
+    {
+      "LogTime": "2018-01-12T09:52:44.9+08:00",
+      "Description": "境外扣款帳戶匯出"
+    },
+    {
+      "LogTime": "2018-01-12T09:52:41.637+08:00",
+      "Description": "境外銀行帳戶主檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T09:52:39.937+08:00",
+      "Description": "境外銀行帳戶主檔匯出"
+    },
+    {
+      "LogTime": "2018-01-12T09:52:31.743+08:00",
+      "Description": "境外開戶基本資料檔匯出"
+    }
+  ]
+}
