@@ -4,13 +4,15 @@ import { SharedModule } from '../shared/shared.module';
 
 //import { DashboardRoutingModule } from './dashboard-routing.module';
 import { MainComponent } from './main/main.component';
+import { AlertModule } from 'ngx-bootstrap';
 
 import 'flipclock/compiled/flipclock';
 
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule/*
+    SharedModule,
+    AlertModule/*
     DashboardRoutingModule*/
   ],
   declarations: [MainComponent]

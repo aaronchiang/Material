@@ -14,6 +14,7 @@ import { ComponentsModule } from './components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebAnalyticsComponent } from './web-analytics/web-analytics.component';
 import { NavExportComponent } from './components/nav-export/nav-export.component';
+import { AlertModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { NavExportComponent } from './components/nav-export/nav-export.component
     HttpModule,
     SharedModule,
     FormsModule,
+    AlertModule.forRoot(),
     ReactiveFormsModule,
     DashboardModule,
     AppRoutingModule
