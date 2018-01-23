@@ -1,7 +1,12 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { CoreService, DailyAccounting, AccountingFund, Summary } from '../../core.service';
-import { MatTableDataSource, MatPaginator, PageEvent, MatSort, Sort } from '@angular/material';
+import { MatTableDataSource, MatPaginator, MatPaginatorIntl, PageEvent, MatSort, Sort } from '@angular/material';
+import { AlertModule } from 'ngx-bootstrap';
 import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/observable/fromEvent';
 
 declare var jQuery: any;
 declare var moment: any;
@@ -15,6 +20,7 @@ declare var FlipClock: any;
 export class MainComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) fundPaginator: MatPaginator;
   @ViewChild(MatSort) fundSort: MatSort;
+  @ViewChild('filter') filter: ElementRef;
   @ViewChild(MatPaginator) logPaginator: MatPaginator;
   @ViewChild(MatSort) logSort: MatSort;
 
@@ -28,7 +34,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   prevDate: any;
   clock: any;
 
-  constructor(private _service: CoreService) {
+  constructor(private _service: CoreService, private matPaginatorIntl: MatPaginatorIntl) {
   }
 
   getDailyAccounting(): void {
@@ -51,6 +57,28 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.getDailyAccounting();
+    Observable.fromEvent(this.filter.nativeElement, 'keyup')
+      .debounceTime(300)
+      .distinctUntilChanged()
+      .subscribe(() => {
+        this.fundDataSource.filter = (this.filter.nativeElement as HTMLInputElement).value;
+      });
+
+    this.matPaginatorIntl.getRangeLabel = (page: number, pageSize: number, length: number): string => {
+      if (length === 0 || pageSize === 0) {
+        return `第 0 筆、共 ${length} 筆`;
+      }
+
+      length = Math.max(length, 0);
+      const startIndex = page * pageSize;
+      const endIndex = startIndex < length ? Math.min(startIndex + pageSize, length) : startIndex + pageSize;
+
+      return `第 ${startIndex + 1} - ${endIndex} 筆、共 ${length} 筆`;
+    };
+
+    this.matPaginatorIntl.itemsPerPageLabel = '每頁筆數：';
+    this.matPaginatorIntl.nextPageLabel = '下一頁';
+    this.matPaginatorIntl.previousPageLabel = '上一頁';
   }
 
   ngAfterViewInit() {
