@@ -26,7 +26,8 @@
         ],
         "scripts": [
             "../node_modules/jquery/dist/jquery.min.js",
-            "../node_modules/flipclock/compiled/flipclock.js"
+            "../node_modules/flipclock/compiled/flipclock.js",
+            "../node_modules/chart.js/dist/Chart.min.js"
         ],
         "environmentSource": "environments/environment.ts",
         "environments": {
