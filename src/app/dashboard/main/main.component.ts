@@ -33,6 +33,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   data: DailyAccounting = new DailyAccounting();
   fundCount = 0;
   lockedFundCount = 0;
+  confirmedFundCount = 0;
   logCount = 0;
   prevDate: any;
   clock: any;
@@ -48,6 +49,7 @@ export class MainComponent implements OnInit, AfterViewInit {
       this.logDataSource.data = data.SummaryList;
       this.logCount = data.SummaryList.length;
       this.lockedFundCount = this.data.FundList.filter(x => x.IsLocked).length;
+      this.confirmedFundCount = this.data.FundList.filter(x => x.IsConfirmed).length;
 
       if (this.prevDate != this.data.BaseDate) {
         console.log(this.dayLabel);
@@ -64,12 +66,13 @@ export class MainComponent implements OnInit, AfterViewInit {
         type: 'doughnut',
         data: {
           datasets: [{
-            data: [this.lockedFundCount, this.fundCount - this.lockedFundCount],
-            backgroundColor: ['#ffce56', '#36a2eb']
+            data: [(this.fundCount - this.lockedFundCount), (this.lockedFundCount - this.confirmedFundCount), this.confirmedFundCount],
+            backgroundColor: ['', '#ffce56', '#36a2eb']
           }],
           labels: [
+            '未鎖定',
             '已鎖定',
-            '未鎖定'
+            '已確認'
           ]
         },
         options: {
