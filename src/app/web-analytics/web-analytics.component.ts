@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, ValidatorFn, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import { MatStepperIntl, ErrorStateMatcher, MatDatepickerInputEvent } from '@angular/material';
-import { Http } from '@angular/http';
+import { CoreService } from '../core.service';
+import { AlertModule, ModalModule } from 'ngx-bootstrap';
 import * as moment from 'moment';
 
 @Component({
@@ -13,10 +14,13 @@ export class WebAnalyticsComponent implements OnInit {
   analyticsTypeList: any[];
   today = moment();
   analyticsForm: FormGroup;
-  minDate = moment().add('years', -1);
+  minDate = moment().add(-1, 'years');
   maxDate = moment();
+  success: boolean;
+  exceptions: boolean;
+  errorMessage = '';
 
-  constructor(private _http: Http) {
+  constructor(private _service: CoreService) {
     this.createForm();
   }
 
@@ -56,7 +60,25 @@ export class WebAnalyticsComponent implements OnInit {
   public saveForm() {
     if (this.analyticsForm.valid) {
       console.log(this.analyticsForm.value);
-      this._http.post('http://localhost:55196/api/BI', this.analyticsForm.value).subscribe(res => console.log(res));
+      this.success = false;
+      this.exceptions = false;
+
+      this._service.addWebAnalytics(this.analyticsForm.value).subscribe((res) => {
+        console.log(res);
+        /*
+        switch (res.status) {
+            case 200:
+              this.success = true;
+              break;
+            case 409:
+              //break;
+            default:
+              this.exceptions = true;
+              this.errorMessage = res.statusText;
+              break;
+          }
+        */
+      });
       this.createForm();
     }
   }
