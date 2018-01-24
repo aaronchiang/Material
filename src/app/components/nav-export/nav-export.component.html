@@ -2,15 +2,24 @@
     <mat-card-title>
     </mat-card-title>
     <mat-card-content>
-        <form [formGroup]="exportForm">
+      <form [formGroup]="exportForm">
             <div>
-                <mat-form-field floatLabel="always">
+              <input matInput placeholder="匯出日期" class="form-control" formControlName="ExportDate" bsDaterangepicker #drp="bsDaterangepicker" 
+              [minDate]="minDate" [maxDate]="maxDate" [bsConfig]="bsConfig" />
+                      <mat-form-field floatLabel="always">
+        <!--
                     <input matInput [max]="maxDate" [min]="minDate" placeholder="匯出日期" formControlName="ExportDate" [matDatepicker]="ExportDatepicker" disabled required/>
+        -->
                     <mat-datepicker-toggle [for]="ExportDatepicker" matSuffix></mat-datepicker-toggle>
                     <mat-datepicker #ExportDatepicker startView="year" disabled="false" touchUi="true"></mat-datepicker>
                 </mat-form-field>
             </div>
-        </form>
+      </form>
+        <div>
+            <div class="input-group-btn">
+                <button class="btn btn-success" (click)="drp.toggle() ">Open</button>
+            </div>
+        </div>
         <div>
             <button mat-raised-button color="primary" [disabled]="exportForm.invalid" (click)="saveForm()"><mat-icon>file_download</mat-icon></button>
         </div>

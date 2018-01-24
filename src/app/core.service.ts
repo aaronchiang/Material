@@ -1,6 +1,6 @@
 import { environment } from './../environments/environment';
 import { Injectable } from '@angular/core';
-import { Http, Response, ResponseContentType } from '@angular/http';
+import { Http, Response, Headers, RequestOptions, ResponseContentType } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -8,6 +8,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CoreService {
   fundDailyUrl = environment.fundDailyUrl;
+  navExportUrl = environment.navExportUrl;
 
   constructor(private _http: Http) {
   }
@@ -17,44 +18,28 @@ export class CoreService {
   }
 
   downloadNav(): Observable<any> {
-    return this._http.post('http://172.17.3.18/api/FundGroup/GetNav/', {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    headers.append('Accept', 'application/json');
+    headers.append('Access-Control-Allow-Methods', 'POST');
+    headers.append('Access-Control-Allow-Origin', '*');
+    headers.append('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding');
+    let options = new RequestOptions({ headers: headers,
+      responseType: ResponseContentType.ArrayBuffer });
+    return this._http.post(this.navExportUrl, {
       'StartDate': '2017-12-01',
       'EndDate': '2017-12-31'
-    }, { responseType: ResponseContentType.Blob })
-    .map(res => res.blob());
-    /*
-    return Observable.create(observer => {
-      let xhr = new XMLHttpRequest();
-      xhr.open('POST', 'http://localhost:53264/api/FundGroup/GetNav/', true);
-      xhr.setRequestHeader('Content-type', 'application/json');
-      xhr.responseType = 'blob';
-
-      xhr.onreadystatechange = function () {
-          if (xhr.readyState === 4) {
-              if (xhr.status === 200) {
-
-                  let contentType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
-                  let blob = new Blob([xhr.response], { type: contentType });
-                  observer.next(blob);
-                  observer.complete();
-              } else {
-                  observer.error(xhr.response);
-              }
-          }
-      };
-      xhr.send();
-    });*/
+    }, options);
   }
 }
 
 export class DailyAccounting {
   CurrentTime: Date;
   BaseDate: Date = new Date();
-  IsNavReady: boolean = false;
+  IsNavReady = false;
   IsWork: boolean;
-  Confirmed: number = 0;
-  Locked: number = 0;
-  Done: boolean = false;
+  Confirmed = 0;
+  Locked = 0;
+  Done = false;
   FundList: Array<AccountingFund> = new Array<AccountingFund>();
   SummaryList: Array<Summary> = new Array<Summary>();
 }
