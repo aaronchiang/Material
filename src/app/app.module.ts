@@ -1,5 +1,6 @@
 import { HttpModule } from '@angular/http';
 import { CoreService } from './core.service';
+import { MessagesService } from './services/messages.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,7 @@ import { ComponentsModule } from './components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebAnalyticsComponent } from './web-analytics/web-analytics.component';
 import { NavExportComponent } from './components/nav-export/nav-export.component';
-import { AlertModule } from 'ngx-bootstrap';
+import { AlertModule, ModalModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,11 +31,12 @@ import { AlertModule } from 'ngx-bootstrap';
     SharedModule,
     FormsModule,
     AlertModule.forRoot(),
+    ModalModule.forRoot(),
     ReactiveFormsModule,
     DashboardModule,
     AppRoutingModule
   ],
-  providers: [CoreService],
+  providers: [CoreService, MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
