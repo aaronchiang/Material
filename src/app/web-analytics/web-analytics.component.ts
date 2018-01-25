@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, ValidatorFn, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import { MatStepperIntl, ErrorStateMatcher, MatDatepickerInputEvent } from '@angular/material';
-import { CoreService } from '../core.service';
+import { CoreService, WebAnalytics } from '../core.service';
 import { AlertModule, ModalModule } from 'ngx-bootstrap';
 import * as moment from 'moment';
 
@@ -12,6 +12,7 @@ import * as moment from 'moment';
 })
 export class WebAnalyticsComponent implements OnInit {
   analyticsTypeList: any[];
+  webAnalytics: WebAnalytics;
   today = moment();
   analyticsForm: FormGroup;
   minDate = moment().add(-1, 'years');
@@ -20,7 +21,7 @@ export class WebAnalyticsComponent implements OnInit {
   exceptions: boolean;
   errorMessage = '';
 
-  constructor(private _service: CoreService) {
+  constructor(private service: CoreService) {
     this.createForm();
   }
 
@@ -41,6 +42,24 @@ export class WebAnalyticsComponent implements OnInit {
       id: 4,
       name: '桌機官網'
     }];
+
+    this.getDefaultWebAnalytics();
+  }
+
+  private getDefaultWebAnalytics() {
+    this.getWebAnalytics(this.analyticsTypeList[0].id, this.today.format('YYYY-MM-DD'));
+  }
+
+  private getWebAnalytics(type: number, analyticsDate: string) {
+    this.service.getWebAnalytics(type, analyticsDate).subscribe(data => {
+      this.webAnalytics = data;
+      this.analyticsForm.setValue(data);
+    });
+  }
+
+  private refresh() {
+    const analyticsDate = moment(this.analyticsForm.get('AnalyticsDate').value);
+    this.getWebAnalytics(this.analyticsForm.get('AnalyticsType').value, analyticsDate.format('YYYY-MM-DD'));
   }
 
   private createForm() {
@@ -63,27 +82,22 @@ export class WebAnalyticsComponent implements OnInit {
       this.success = false;
       this.exceptions = false;
 
-      this._service.addWebAnalytics(this.analyticsForm.value).subscribe((res) => {
-        console.log(res);
-        /*
+      this.service.addWebAnalytics(this.analyticsForm.value).subscribe((res) => {
         switch (res.status) {
             case 200:
+            case 204:
               this.success = true;
               break;
-            case 409:
-              //break;
             default:
               this.exceptions = true;
               this.errorMessage = res.statusText;
               break;
           }
-        */
       });
-      this.createForm();
     }
   }
 
   public clearForm() {
-    this.createForm();
+    this.refresh();
   }
 }

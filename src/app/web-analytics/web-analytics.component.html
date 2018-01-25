@@ -12,14 +12,14 @@
             </div>
             <div>
                 <mat-form-field floatLabel="always">
-                    <mat-select formControlName="AnalyticsType" placeholder="統計來源">
+                    <mat-select formControlName="AnalyticsType" placeholder="統計來源" (change)="refresh()">
                         <mat-option *ngFor="let item of analyticsTypeList" [value]="item.id">{{ item.name }}</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
             <div>
                 <mat-form-field floatLabel="always">
-                    <input matInput [max]="maxDate" [min]="minDate" placeholder="週索引" formControlName="AnalyticsDate" [matDatepicker]="AnalyticsDatepicker" required/>
+                    <input matInput [max]="maxDate" [min]="minDate" placeholder="週索引" formControlName="AnalyticsDate" [matDatepicker]="AnalyticsDatepicker" (dateChange)="refresh()" required/>
                     <mat-datepicker-toggle [for]="AnalyticsDatepicker" matSuffix></mat-datepicker-toggle>
                     <mat-datepicker #AnalyticsDatepicker disabled="false" touchUi="true"></mat-datepicker>
                 </mat-form-field>
@@ -63,10 +63,9 @@
                 </mat-form-field>
             </div>
             <div>
-                <button mat-raised-button color="primary" [disabled]="analyticsForm.invalid" (click)="saveForm()"><mat-icon>done</mat-icon></button>
-                <button mat-raised-button (click)="clearForm()"><mat-icon>clear</mat-icon></button>
+                <button mat-raised-button color="primary" [disabled]="analyticsForm.invalid" (click)="saveForm()"><mat-icon>done</mat-icon>送出</button>
+                <button mat-raised-button (click)="clearForm()"><mat-icon>undo</mat-icon>復原</button>
             </div>
-            <!--<mat-icon fontSet="fontawesome" fontIcon="fa-check" class="fa-2x"></mat-icon>-->
         </form>
     </mat-card-content>
     <mat-card-footer>

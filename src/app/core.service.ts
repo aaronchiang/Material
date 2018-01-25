@@ -50,9 +50,14 @@ export class CoreService {
     });*/
   }
 
-  getWebAnalytics(type: number, analyticsDate: Date) {
-
+  getWebAnalytics(type: number, analyticsDate: string): Observable<WebAnalytics> {
+    const url = `${this.webAnalyticsUrl}?analyticsType=${type}&analyticsDate=${analyticsDate}`;
+    return this.http.get(url).pipe(
+      tap(_ => this.log(`analyticsType=${type}&analyticsDate=${analyticsDate}`)),
+      catchError(this.handleError<any>(`get `))
+    ).map(res => res.json());
   }
+
   addWebAnalytics(data: any): Observable<any> {
     return this.http.post(this.webAnalyticsUrl, data)
       .pipe(
