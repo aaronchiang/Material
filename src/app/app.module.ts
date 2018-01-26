@@ -1,5 +1,6 @@
 import { HttpModule } from '@angular/http';
 import { CoreService } from './core.service';
+import { MessagesService } from './services/messages.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -34,7 +35,7 @@ import { AlertModule, BsDatepickerModule } from 'ngx-bootstrap';
     ComponentsModule,
     AppRoutingModule
   ],
-  providers: [CoreService],
+  providers: [CoreService, MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
