@@ -1,1 +1,21 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="sideNav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    <span>IT Dashboard</span>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sideNav opened="true" mode="side">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/dashboard">
+                <mat-icon>dashboard</mat-icon>&nbsp;Dashbaord</a>
+            <a mat-list-item routerLink="/webanalytics">
+                <mat-icon>settings_input_component</mat-icon>&nbsp;流量統計</a>
+            <a mat-list-item routerLink="/navexport">
+                <mat-icon>get_app</mat-icon>&nbsp;淨值匯出</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
