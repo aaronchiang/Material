@@ -22,7 +22,7 @@ export class CoreService {
   }
 
   downloadNav(dateRange: any): Observable<any> {
-    return this._http.post(this.navExportUrl, dateRange, new RequestOptions({ responseType: ResponseContentType.Blob }));
+    return this.http.post(this.navExportUrl, dateRange, new RequestOptions({ responseType: ResponseContentType.Blob }));
   }
 
   getWebAnalytics(type: number, analyticsDate: string): Observable<WebAnalytics> {

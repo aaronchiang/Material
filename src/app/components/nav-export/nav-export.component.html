@@ -2,20 +2,24 @@
     <mat-card-title>
     </mat-card-title>
     <mat-card-content>
-            <h4>匯出日期區間</h4>
-            <div class="navexport form-group">
-                <div class="input-group" daterangepicker [options]="pickerOptions" (selected)="selectedDate($event, daterange)">
-                    <span class="form-control uneditable-input"  name="daterange" >
-                        {{ daterange.start | date:'yyyy-MM-dd' }} ~ {{ daterange.end | date:'yyyy-MM-dd' }}
-                    </span>
-                    <span class="input-group-btn">
-                        <a type="button" class="btn btn-default"><mat-icon fontSet="fontawesome" fontIcon="fa-calendar"></mat-icon></a>
-                    </span>
-                    <span class="input-group-btn">
-                        </span>
-                    </div>
-                    <button class="btn btn-default" (click)="saveForm()"><mat-icon fontSet="fontawesome" fontIcon="fa-download"></mat-icon></button>
-                </div>
+        <h4>匯出日期區間</h4>
+        <div class="navexport form-group">
+            <div class="input-group" daterangepicker [options]="pickerOptions" (selected)="selectedDate($event, dateRange)">
+                <span class="form-control uneditable-input" name="dateRange">
+          {{ dateRange.start | date:'yyyy-MM-dd' }} ~ {{ dateRange.end | date:'yyyy-MM-dd' }}
+        </span>
+                <span class="input-group-btn">
+          <a type="button" class="btn btn-default">
+            <mat-icon fontSet="fontawesome" fontIcon="fa-calendar"></mat-icon>
+          </a>
+        </span>
+                <span class="input-group-btn">
+        </span>
+            </div>
+            <button class="btn btn-default" (click)="saveForm()">
+        <mat-icon fontSet="fontawesome" fontIcon="fa-download"></mat-icon>
+      </button>
+        </div>
         <!--
         <div class="row">
             <div class="col-xs-12 col-12 col-md-4 form-group">
@@ -35,5 +39,5 @@
             </div>
         </form>
     -->
-</mat-card-content>
+    </mat-card-content>
 </mat-card>
