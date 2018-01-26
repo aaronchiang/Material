@@ -1,0 +1,6 @@
+{
+  "/FundGroup": {
+    "target": "http://172.17.3.18/api",
+    "secure": false
+  }
+}

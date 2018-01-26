@@ -7,5 +7,5 @@ export const environment = {
   production: false,
   envName: 'dev',
   fundDailyUrl: 'http://172.17.3.12/api/DailyAccounting',
-  navExportUrl: 'http://172.17.3.18/api/FundGroup/GetNav/'
+  navExportUrl: '/FundGroup/GetNav/'
 };
