@@ -11,7 +11,7 @@ import * as moment from 'moment';
 @Injectable()
 export class CoreService {
   fundDailyUrl = environment.fundDailyUrl;
-  webAnalyticsUrl = 'http://localhost:55196/api/BI';
+  webAnalyticsUrl = environment.webAnalyticsUrl;
   navExportUrl = environment.navExportUrl;
 
   constructor(private http: Http, private messagesService: MessagesService ) {
@@ -22,7 +22,8 @@ export class CoreService {
   }
 
   downloadNav(dateRange: any): Observable<any> {
-    return this.http.post(this.navExportUrl, dateRange, new RequestOptions({ responseType: ResponseContentType.Blob }));
+    const headers = new Headers({ 'Access-Control-Allow-Origin': '*' });
+    return this.http.post(this.navExportUrl, dateRange, new RequestOptions({ headers: headers, responseType: ResponseContentType.Blob }));
   }
 
   getWebAnalytics(type: number, analyticsDate: string): Observable<WebAnalytics> {
