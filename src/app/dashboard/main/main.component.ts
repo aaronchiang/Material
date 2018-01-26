@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { CoreService, DailyAccounting, AccountingFund, Summary } from '../../core.service';
+import { CoreService, DailyAccounting, AccountingFund, Summary } from '../../services/core.service';
 import { MatTableDataSource, MatPaginator, MatPaginatorIntl, PageEvent, MatSort, Sort } from '@angular/material';
 import { AlertModule } from 'ngx-bootstrap';
 import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
@@ -29,7 +29,6 @@ export class MainComponent implements OnInit, AfterViewInit {
   displayedLogColumns = ['LogTime', 'Description'];
   fundDataSource = new MatTableDataSource<AccountingFund>();
   logDataSource = new MatTableDataSource<Summary>();
-  dayLabel: any;
   data: DailyAccounting = new DailyAccounting();
   fundCount = 0;
   lockedFundCount = 0;
@@ -52,7 +51,6 @@ export class MainComponent implements OnInit, AfterViewInit {
       this.confirmedFundCount = this.data.FundList.filter(x => x.IsConfirmed).length;
 
       if (this.prevDate != this.data.BaseDate) {
-        console.log(this.dayLabel);
         this.clock = new FlipClock(jQuery('.clock'), 0, {
           clockFace: 'Counter'
         });

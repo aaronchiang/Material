@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, ValidatorFn, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import { zhCn } from 'ngx-bootstrap/locale';
-import { CoreService } from '../../core.service';
+import { CoreService } from '../../services/core.service';
 import { saveAs } from 'file-saver';
 import * as moment from 'moment';
 
