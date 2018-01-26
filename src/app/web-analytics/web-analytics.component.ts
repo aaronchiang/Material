@@ -57,7 +57,7 @@ export class WebAnalyticsComponent implements OnInit {
     });
   }
 
-  private refresh() {
+  public refresh() {
     const analyticsDate = moment(this.analyticsForm.get('AnalyticsDate').value);
     this.getWebAnalytics(this.analyticsForm.get('AnalyticsType').value, analyticsDate.format('YYYY-MM-DD'));
   }

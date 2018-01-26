@@ -4,7 +4,7 @@
     <mat-card-content>
         <h4>匯出日期區間</h4>
         <div class="navexport form-group">
-            <div class="input-group" daterangepicker [options]="pickerOptions" (selected)="selectedDate($event, dateRange)">
+            <div class="input-group" daterangepicker [options]="pickerOptions" (selected)="selectedDate($event)">
                 <span class="form-control uneditable-input" name="dateRange">
           {{ dateRange.start | date:'yyyy-MM-dd' }} ~ {{ dateRange.end | date:'yyyy-MM-dd' }}
         </span>
