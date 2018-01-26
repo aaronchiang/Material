@@ -84,6 +84,7 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.getDailyAccounting();
+    setInterval(() => this.getDailyAccounting(), 300000);
     Observable.fromEvent(this.filter.nativeElement, 'keyup')
       .debounceTime(300)
       .distinctUntilChanged()
