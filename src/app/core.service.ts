@@ -1,7 +1,7 @@
 import { MessagesService } from './services/messages.service';
 import { environment } from './../environments/environment';
 import { Injectable } from '@angular/core';
-import { Http, Response, ResponseContentType } from '@angular/http';
+import { Http, Response, Headers, RequestOptions, ResponseContentType } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
@@ -12,6 +12,7 @@ import * as moment from 'moment';
 export class CoreService {
   fundDailyUrl = environment.fundDailyUrl;
   webAnalyticsUrl = 'http://localhost:55196/api/BI';
+  navExportUrl = environment.navExportUrl;
 
   constructor(private http: Http, private messagesService: MessagesService ) {
   }
@@ -20,34 +21,8 @@ export class CoreService {
     return this.http.get(this.fundDailyUrl).map(res => res.json());
   }
 
-  downloadNav(): Observable<any> {
-    return this.http.post('http://172.17.3.18/api/FundGroup/GetNav/', {
-      'StartDate': '2017-12-01',
-      'EndDate': '2017-12-31'
-    }, { responseType: ResponseContentType.Blob })
-    .map(res => res.blob());
-    /*
-    return Observable.create(observer => {
-      let xhr = new XMLHttpRequest();
-      xhr.open('POST', 'http://localhost:53264/api/FundGroup/GetNav/', true);
-      xhr.setRequestHeader('Content-type', 'application/json');
-      xhr.responseType = 'blob';
-
-      xhr.onreadystatechange = function () {
-          if (xhr.readyState === 4) {
-              if (xhr.status === 200) {
-
-                  let contentType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
-                  let blob = new Blob([xhr.response], { type: contentType });
-                  observer.next(blob);
-                  observer.complete();
-              } else {
-                  observer.error(xhr.response);
-              }
-          }
-      };
-      xhr.send();
-    });*/
+  downloadNav(dateRange: any): Observable<any> {
+    return this._http.post(this.navExportUrl, dateRange, new RequestOptions({ responseType: ResponseContentType.Blob }));
   }
 
   getWebAnalytics(type: number, analyticsDate: string): Observable<WebAnalytics> {

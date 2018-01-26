@@ -38,6 +38,7 @@ import {
 } from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MomentModule } from 'angular2-moment';
+import { Daterangepicker } from 'ng2-daterangepicker';
 
 export const TW_FORMATS = {
   parse: {
@@ -93,7 +94,8 @@ export const TW_FORMATS = {
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MomentModule
+    MomentModule,
+    Daterangepicker
   ]
 })
 export class SharedModule { }

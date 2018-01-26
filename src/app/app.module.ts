@@ -14,14 +14,12 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { ComponentsModule } from './components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebAnalyticsComponent } from './web-analytics/web-analytics.component';
-import { NavExportComponent } from './components/nav-export/nav-export.component';
-import { AlertModule } from 'ngx-bootstrap';
+import { AlertModule, BsDatepickerModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     WebAnalyticsComponent,
-    NavExportComponent,
     LoginComponent
   ],
   imports: [
@@ -31,8 +29,10 @@ import { AlertModule } from 'ngx-bootstrap';
     SharedModule,
     FormsModule,
     AlertModule.forRoot(),
+    BsDatepickerModule.forRoot(),
     ReactiveFormsModule,
     DashboardModule,
+    ComponentsModule,
     AppRoutingModule
   ],
   providers: [CoreService, MessagesService],
