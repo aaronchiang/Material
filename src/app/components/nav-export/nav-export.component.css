@@ -1,0 +1,8 @@
+.navexport {
+  display: flex;
+  flex-direction: column;
+}
+
+.navexport > * {
+  width: 380px;
+}

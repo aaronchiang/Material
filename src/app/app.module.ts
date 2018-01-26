@@ -13,14 +13,12 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { ComponentsModule } from './components/components.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebAnalyticsComponent } from './web-analytics/web-analytics.component';
-import { NavExportComponent } from './components/nav-export/nav-export.component';
 import { AlertModule, BsDatepickerModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     WebAnalyticsComponent,
-    NavExportComponent,
     LoginComponent
   ],
   imports: [
@@ -33,6 +31,7 @@ import { AlertModule, BsDatepickerModule } from 'ngx-bootstrap';
     BsDatepickerModule.forRoot(),
     ReactiveFormsModule,
     DashboardModule,
+    ComponentsModule,
     AppRoutingModule
   ],
   providers: [CoreService],

@@ -17,18 +17,8 @@ export class CoreService {
     return this._http.get(this.fundDailyUrl).map(res => res.json());
   }
 
-  downloadNav(): Observable<any> {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    headers.append('Accept', 'application/json');
-    headers.append('Access-Control-Allow-Methods', 'POST');
-    headers.append('Access-Control-Allow-Origin', '*');
-    headers.append('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding');
-    let options = new RequestOptions({ headers: headers,
-      responseType: ResponseContentType.ArrayBuffer });
-    return this._http.post(this.navExportUrl, {
-      'StartDate': '2017-12-01',
-      'EndDate': '2017-12-31'
-    }, options);
+  downloadNav(dateRange: any): Observable<any> {
+    return this._http.post(this.navExportUrl, dateRange, new RequestOptions({ responseType: ResponseContentType.Blob }));
   }
 }
 

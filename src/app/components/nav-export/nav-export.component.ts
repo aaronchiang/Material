@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, ValidatorFn, Validators, FormGroupDirective, NgForm } from '@angular/forms';
-import { ErrorStateMatcher, MatDatepickerInputEvent } from '@angular/material';
-import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import { zhCn } from 'ngx-bootstrap/locale';
 import { CoreService } from '../../core.service';
 import { saveAs } from 'file-saver';
 import * as moment from 'moment';
@@ -13,16 +12,25 @@ import * as moment from 'moment';
 })
 export class NavExportComponent implements OnInit {
   exportForm: FormGroup;
-  minDate = moment().add(-1, 'months').toDate();
-  maxDate = moment().add(-1, 'days').toDate();
-  bsConfig: Partial<BsDatepickerConfig> = Object.assign({}, { containerClass: 'theme-dark-blue' });
+  dateRange: any = {
+    start: moment().add(-1, 'months').startOf('month'),
+    end: moment().add(-1, 'months').endOf('month')
+  };
+  pickerOptions = {
+    startDate: this.dateRange.start,
+    endDate: this.dateRange.end,
+    minDate: moment().add(-3, 'months'),
+    maxDate: moment().add(-1, 'days'),
+    locale: {
+      format: 'YYYY-MM-DD'
+    }
+  }
 
   constructor(private _service: CoreService) {
     this.createForm();
   }
 
   ngOnInit() {
-    console.log(this.minDate);
   }
 
   private createForm() {
@@ -31,39 +39,17 @@ export class NavExportComponent implements OnInit {
     });
   }
 
-  private saveFile(data) {
-    let blob = new Blob([(<any>data)], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});
-    let url= window.URL.createObjectURL(blob);
-    window.open(url);
-    console.log();
+  private selectedDate(value: any) {
+    this.dateRange.start = value.start;
+    this.dateRange.end = value.end;
   }
 
   public saveForm() {
-    if (this.exportForm.valid) {
-      this._service.downloadNav()
-        //.subscribe(this.saveFile);
-        .subscribe(res => {
-          console.log(res.length);
-          const blob = new Blob([res], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-          const fileName = 'Nav.xlsx';
-          saveAs(blob, fileName);
-        });
-      /*
-
-      let currentHeaders = new Headers();
-      currentHeaders.append('Content-Type', 'application/json');
-      currentHeaders.append('Accept', 'application/json');
-      currentHeaders.append('Access-Control-Allow-Origin', 'localhost');
-      this._http.post('http://172.17.3.18/api/FundGroup/GetNav/', {
-        'StartDate': '2017-12-01',
-        'EndDate': '2017-12-31'
-      }, {
-        method: 'POST',
-        headers: currentHeaders,
-        responseType: ResponseContentType.Blob
-      }).subscribe(this.saveFile);
-      this.createForm();
-      */
-    }
+    this._service.downloadNav({ StartDate: this.dateRange.start.format('YYYY-MM-DD'), EndDate: this.dateRange.end.format('YYYY-MM-DD')})
+    .map((res) => new Blob([res['_body']], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }))
+    .subscribe(blob => {
+      const fileName = `Nav_${this.dateRange.start.year() - 1911}${this.dateRange.start.format('MM')}.xlsx`;
+      saveAs(blob, fileName);
+    });
   }
 }
