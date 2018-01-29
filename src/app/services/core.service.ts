@@ -1,5 +1,5 @@
-import { MessagesService } from './services/messages.service';
-import { environment } from './../environments/environment';
+import { MessagesService } from './messages.service';
+import { environment } from '../../environments/environment';
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions, ResponseContentType } from '@angular/http';
 

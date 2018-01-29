@@ -1,5 +1,5 @@
 import { HttpModule } from '@angular/http';
-import { CoreService } from './core.service';
+import { CoreService } from './services/core.service';
 import { MessagesService } from './services/messages.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
