@@ -7,5 +7,6 @@ export const environment = {
   production: false,
   envName: 'dev',
   fundDailyUrl: 'http://172.17.3.12/api/DailyAccounting',
+  webAnalyticsUrl: 'http://172.17.3.12/api/BI',
   navExportUrl: '/FundGroup/GetNav/'
 };

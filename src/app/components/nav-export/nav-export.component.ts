@@ -39,7 +39,7 @@ export class NavExportComponent implements OnInit {
     });
   }
 
-  private selectedDate(value: any) {
+  public selectedDate(value: any) {
     this.dateRange.start = value.start;
     this.dateRange.end = value.end;
   }
