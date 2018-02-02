@@ -1,5 +1,8 @@
-import { CoreService, DailyAccounting } from './../../services/core.service';
+import { IDailyAccounting } from './../../interface/daily-accounting.interface';
+import { DailyAccounting } from './../../model/daily-accounting.model';
 import { Component, OnInit } from '@angular/core';
+
+import { Observable } from 'rxjs/Observable';
 
 declare var jQuery: any;
 declare var moment: any;
@@ -11,29 +14,26 @@ declare var FlipClock: any;
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent implements OnInit {
-  data: DailyAccounting = new DailyAccounting();
+  data: Observable<DailyAccounting> = this._service.dailyAccounting$;
+  baseDate: any;
   prevDate: any;
   clock: any;
   fundCount = 0;
 
-  constructor(private _service: CoreService) { }
+  constructor(private _service: IDailyAccounting) {}
 
-  getDailyAccounting(): void {
-    this._service.getDailyAccounting().subscribe(data => {
-      this.data = data;
-      if (this.prevDate != this.data.BaseDate) {
+  ngOnInit() {
+    this._service.getDailyAccounting();
+    this.data.subscribe(data => {
+      if (this.prevDate != data.BaseDate) {
         this.clock = new FlipClock(jQuery('.clock'), 0, {
           clockFace: 'Counter'
         });
-        this.fundCount = this.data.FundList.length;
+        this.fundCount = data.FundList.length;
         this.clock.setValue(this.fundCount);
-        this.prevDate = this.data.BaseDate;
+        this.baseDate = data.BaseDate;
+        this.prevDate = data.BaseDate;
       }
     });
   }
-
-  ngOnInit() {
-    this.getDailyAccounting();
-  }
-
 }

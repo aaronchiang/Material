@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, ValidatorFn, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import { MatStepperIntl, ErrorStateMatcher, MatDatepickerInputEvent } from '@angular/material';
-import { CoreService, WebAnalytics } from '../services/core.service';
+import { CoreService } from '../service/core.service';
+import { WebAnalytics } from '../model/web-analytics.model';
 import { AlertModule, ModalModule } from 'ngx-bootstrap';
 import * as moment from 'moment';
 

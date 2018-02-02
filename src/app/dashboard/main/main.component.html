@@ -1,78 +1,39 @@
 <mat-card>
-  <mat-card-header>
-    <span class="mat-h1 mat-card-header">{{ data.BaseDate | date:'MM/dd' }}&nbsp;({{ data.BaseDate | amDateFormat:'ddd' }})</span>
-    <span class="clock" style="zoom: 0.7;-moz-transform: scale(0.7)"></span>
-  </mat-card-header>
-  <mat-card-title>
-    <alert *ngIf="data.Done" type="success">
-      <strong>帳平</strong>，請等候OP通知</alert>
-    <div style="width: 550px">
-      <canvas id="canvas">{{ chart }}</canvas>
-    </div>
-  </mat-card-title>
-  <mat-card-content>
-    <div style="width: 550px">
-      <mat-tab-group mat-stretch-tabs>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <mat-icon fontSet="fontawesome" fontIcon="fa-table" style="margin-top: 15px;">&nbsp;</mat-icon>基金({{ lockedFundCount}}/{{ fundCount}})
-          </ng-template>
-          <mat-form-field style="margin-top: 5px;">
-            <input matInput #filter placeholder="搜尋">
-            <mat-icon matSuffix>search</mat-icon>
-          </mat-form-field>
-          <mat-table #table [dataSource]="fundDataSource" matSort>
-            <ng-container matColumnDef="FundId">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>代碼</mat-header-cell>
-              <mat-cell *matCellDef="let row">{{ row.FundId }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="IsLocked">
-              <mat-header-cell *matHeaderCellDef>&nbsp;</mat-header-cell>
-              <mat-cell *matCellDef="let row">
-                <i class="fa fa-lock warn" *ngIf="row.IsLocked"></i>
-              </mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="FundName">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>基金名稱</mat-header-cell>
-              <mat-cell *matCellDef="let row">{{ row.FundName }}
-                <span *ngIf="row.Nav > 0">({{ row.NavDate | slice:3:5 }}/{{ row.NavDate | slice:5:7 }})</span>
-              </mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="NavDate">
-              <mat-header-cell *matHeaderCellDef>&nbsp;</mat-header-cell>
-              <mat-cell *matCellDef="let row"></mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="Nav">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>淨值</mat-header-cell>
-              <mat-cell *matCellDef="let row">
-                <span *ngIf="row.Nav > 0">{{ row.Nav }}</span>
-                <span *ngIf="row.Nav == 0">--</span>
-              </mat-cell>
-            </ng-container>
-            <mat-header-row *matHeaderRowDef="displayedFundColumns"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: displayedFundColumns;"></mat-row>
-          </mat-table>
-          <mat-paginator #fundPaginator [pageSize]="10" [pageSizeOptions]="[10, 25, 50, 100]"></mat-paginator>
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <mat-icon fontSet="fontawesome" fontIcon="fa-list" style="margin-top: 15px;">&nbsp;</mat-icon>日誌({{ logCount }})
-          </ng-template>
-          <mat-table #table [dataSource]="logDataSource" matSort>
-            <ng-container matColumnDef="LogTime">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Time</mat-header-cell>
-              <mat-cell *matCellDef="let row">{{ row.LogTime | date:'HH:mm' }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="Description">
-              <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
-              <mat-cell *matCellDef="let row">{{ row.Description }}</mat-cell>
-            </ng-container>
-            <mat-header-row *matHeaderRowDef="displayedLogColumns"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: displayedLogColumns;"></mat-row>
-          </mat-table>
-          <mat-paginator #logPaginator [pageSize]="10" [pageSizeOptions]="[10, 25, 50, 100]"></mat-paginator>
-        </mat-tab>
-      </mat-tab-group>
-    </div>
-  </mat-card-content>
+    <mat-card-header>
+    </mat-card-header>
+    <mat-card-title>
+        <alert *ngIf="data.Done" type="success"><strong>帳平</strong>，請等候OP通知</alert>
+        <div style="width: 320px;display: flex; flex: 1 1">
+            <canvas id="canvas1">{{ lockedChart }}</canvas>
+            <canvas id="canvas2">{{ confirmedChart }}</canvas>
+        </div>
+    </mat-card-title>
+    <mat-card-content>
+        <div style="width: 550px">
+            <mat-tab-group mat-stretch-tabs>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon fontSet="fontawesome" fontIcon="fa-table" style="margin-top: 15px;">&nbsp;</mat-icon>基金({{ data.Confirmed }}/{{ fundCount }})
+                    </ng-template>
+                    <app-fund-list></app-fund-list>
+                </mat-tab>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <mat-icon fontSet="fontawesome" fontIcon="fa-list" style="margin-top: 15px;">&nbsp;</mat-icon>日誌({{ logCount }})
+                    </ng-template>
+                    <app-log-list></app-log-list>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </mat-card-content>
+    <mat-card-footer>
+        <div style="width: 550px; display: flex; flex: 1 1;">
+            <div class="col-md-8 col-xs-12">
+                <h6 class="copyright small" *ngIf="data.SummaryList.length > 0">{{ data.SummaryList[0].LogTime | amDateFormat:'HH:mm' }}&nbsp;{{ data.SummaryList[0].Description }}</h6>
+            </div>
+            <div class="col-md-4 col-xs-12 text-xs-right">
+                <h6 class="copyright small">Update: {{ data.CurrentTime | amDateFormat:'HH:mm' }}</h6>
+            </div>
+        </div>
+    </mat-card-footer>
 </mat-card>

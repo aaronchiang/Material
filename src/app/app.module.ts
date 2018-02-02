@@ -1,6 +1,8 @@
+import { IDailyAccounting } from './interface/daily-accounting.interface';
 import { HttpModule } from '@angular/http';
-import { CoreService } from './services/core.service';
-import { MessagesService } from './services/messages.service';
+import { HttpClientModule } from '@angular/common/http';
+import { CoreService } from './service/core.service';
+import { MessagesService } from './service/messages.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -26,6 +28,7 @@ import { AlertModule, BsDatepickerModule } from 'ngx-bootstrap';
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
+    HttpClientModule,
     SharedModule,
     FormsModule,
     AlertModule.forRoot(),
@@ -35,7 +38,10 @@ import { AlertModule, BsDatepickerModule } from 'ngx-bootstrap';
     ComponentsModule,
     AppRoutingModule
   ],
-  providers: [CoreService, MessagesService],
+  providers: [
+    CoreService,
+    MessagesService,
+    {provide: IDailyAccounting, useExisting: CoreService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

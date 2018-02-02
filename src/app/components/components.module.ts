@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { CoreService } from '../services/core.service';
+import { CoreService } from '../service/core.service';
 import { NavExportComponent } from './nav-export/nav-export.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
