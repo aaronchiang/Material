@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { CoreService } from '../service/core.service';
 import { NavExportComponent } from './nav-export/nav-export.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   imports: [
@@ -12,7 +14,8 @@ import { NavExportComponent } from './nav-export/nav-export.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [NavExportComponent],
-  exports: [NavExportComponent]
+  declarations: [NavExportComponent, ToolbarComponent],
+  exports: [NavExportComponent, ToolbarComponent],
+  providers: [CoreService]
 })
 export class ComponentsModule { }

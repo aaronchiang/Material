@@ -7,6 +7,8 @@ import { MainComponent } from './main/main.component';
 import { AlertModule } from 'ngx-bootstrap';
 
 import 'flipclock/compiled/flipclock';
+import { FundListComponent } from './fund-list/fund-list.component';
+import { LogListComponent } from './log-list/log-list.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import 'flipclock/compiled/flipclock';
     AlertModule/*
     DashboardRoutingModule*/
   ],
-  declarations: [MainComponent]
+  declarations: [MainComponent, FundListComponent, LogListComponent]
 })
 export class DashboardModule { }

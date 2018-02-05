@@ -1,0 +1,36 @@
+<mat-form-field style="margin-top: 5px;">
+    <input matInput #filter placeholder="搜尋">
+    <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>
+<mat-table #table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="FundId">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>代碼</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.FundId }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="IsLocked">
+        <mat-header-cell *matHeaderCellDef>&nbsp;</mat-header-cell>
+        <mat-cell *matCellDef="let row">
+            <i class="fa fa-lock warn" *ngIf="row.IsLocked"></i>
+        </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="FundName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>基金名稱</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.FundName }}
+            <span *ngIf="row.Nav > 0">({{ row.NavDate | slice:3:5 }}/{{ row.NavDate | slice:5:7 }})</span>
+        </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="NavDate">
+        <mat-header-cell *matHeaderCellDef>&nbsp;</mat-header-cell>
+        <mat-cell *matCellDef="let row"></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Nav">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>淨值</mat-header-cell>
+        <mat-cell *matCellDef="let row">
+            <span *ngIf="row.Nav > 0">{{ row.Nav }}</span>
+            <span *ngIf="row.Nav == 0">--</span>
+        </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<mat-paginator #paginator [length]="count" [pageSize]="10" [pageSizeOptions]="[10, 25, 50, 100]"></mat-paginator>

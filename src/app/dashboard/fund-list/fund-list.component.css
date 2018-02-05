@@ -1,0 +1,12 @@
+.mat-column-FundName {
+    flex: 9;
+}
+
+.mat-column-Nav {
+    text-align: right;
+    flex: 2;
+}
+
+.warn {
+    color: rgb(129, 129, 3);
+}
